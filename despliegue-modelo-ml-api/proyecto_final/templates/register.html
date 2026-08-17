@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input { width: 300px; padding: 10px; margin-bottom: 10px; display: block; }
+        button { padding: 10px 20px; cursor: pointer; }
+        .error { color: red; margin-bottom: 10px; }
+        a { display: block; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h2>Registro</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Usuario:</label>
+        <input type="text" name="usuario" required>
+
+        <label>Clave:</label>
+        <input type="password" name="clave" required>
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <a href="/login">¿Ya tienes cuenta? Inicia sesión</a>
+</body>
+</html>

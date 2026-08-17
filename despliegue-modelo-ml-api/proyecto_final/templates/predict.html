@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicciones</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input { width: 400px; padding: 10px; margin-bottom: 10px; display: block; }
+        button { padding: 10px 20px; cursor: pointer; }
+        .resultado { margin-top: 20px; font-size: 20px; font-weight: bold; }
+        .logout { float: right; color: red; text-decoration: none; }
+        .usuario { margin-bottom: 20px; color: gray; }
+    </style>
+</head>
+<body>
+    <a href="/logout" class="logout">Cerrar sesión</a>
+
+    <h2>Predicción de Reseñas</h2>
+    <p class="usuario">Bienvenido, {{ usuario }}</p>
+
+    <form method="POST">
+        <label>Escribe el título de la reseña:</label>
+        <input type="text" name="texto" value="{{ texto or '' }}" placeholder="Ej: excelente producto" required>
+        <button type="submit">Predecir</button>
+    </form>
+
+    {% if resultado %}
+        <div class="resultado">
+            Resultado: {{ resultado }}
+        </div>
+    {% endif %}
+</body>
+</html>

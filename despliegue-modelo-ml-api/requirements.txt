@@ -1,0 +1,8 @@
+flask
+flask-mysqldb
+flask-jwt-extended
+joblib
+scikit-learn
+pandas
+pymysql
+python-dotenv

@@ -1,0 +1,6 @@
+# Este proyecto no usa Python: el análisis se realizó con SQL Server y Power BI Desktop.
+# No hay dependencias de Python que instalar.
+#
+# Herramientas utilizadas:
+# - Power BI Desktop (para abrir files/dashboard_used_cars.pbix)
+# - SQL Server / motor compatible con T-SQL (para explotacion.sql)
